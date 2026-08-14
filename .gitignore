@@ -1,0 +1,11 @@
+# Herramientas locales de Claude Code (no forman parte del sitio)
+.claude/
+
+# Sistema operativo
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Dependencias / build
+node_modules/
+.vercel/

@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oswaldo Vassaux — Psicología Clínica e Industrial</title>
+<meta name="description" content="Portafolio de Oswaldo Esteban Vassaux Figueroa. Psicología Clínica e Industrial/Organizacional: comprender la mente, potenciar a la persona.">
+<meta name="theme-color" content="#0B0714">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_GT">
+<meta property="og:title" content="Oswaldo Vassaux — Psicología Clínica e Industrial">
+<meta property="og:description" content="Comprender la mente. Potenciar a la persona.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+<script>document.documentElement.classList.remove('no-js');</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Saltar al contenido principal</a>
+
+<!-- ============================================================
+     BRAND MARK — emblema reutilizable
+     ============================================================ -->
+<svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+  <defs>
+    <!-- userSpaceOnUse: un trazo vertical tiene bounding box de ancho 0,
+         así que objectBoundingBox haría desaparecer el tallo del Psi. -->
+    <linearGradient id="gSilver" gradientUnits="userSpaceOnUse" x1="45" y1="25" x2="170" y2="175">
+      <stop offset="0%"   stop-color="#F5F5FA"/>
+      <stop offset="45%"  stop-color="#C6C6D6"/>
+      <stop offset="100%" stop-color="#8A8A9E"/>
+    </linearGradient>
+    <linearGradient id="gViolet" gradientUnits="userSpaceOnUse" x1="45" y1="95" x2="140" y2="170">
+      <stop offset="0%"   stop-color="#C9B6FD"/>
+      <stop offset="55%"  stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#6D28D9"/>
+    </linearGradient>
+    <linearGradient id="gRing" gradientUnits="userSpaceOnUse" x1="25" y1="170" x2="175" y2="30">
+      <stop offset="0%"   stop-color="#6D28D9"/>
+      <stop offset="45%"  stop-color="#A78BFA"/>
+      <stop offset="100%" stop-color="#DFDFEA"/>
+    </linearGradient>
+
+    <symbol id="mark" viewBox="0 0 200 200">
+      <!-- anillo (mitad izquierda) -->
+      <path d="M100 22 A78 78 0 0 0 100 178"
+            fill="none" stroke="url(#gRing)" stroke-width="5.5" stroke-linecap="round"/>
+
+      <!-- perfil humano (mitad derecha): frente, ceja, nariz, labios, mentón -->
+      <path d="M100 22 C134 22 162 44 168 78
+               C171 94 166 100 160 107
+               C156 111 154 113 157 117
+               C163 124 172 128 170 134
+               C168 139 158 138 155 142
+               C152 145 159 147 158 151
+               C157 155 150 155 152 160
+               C154 165 152 167 146 170
+               C132 178 116 178 100 178"
+            fill="none" stroke="url(#gSilver)" stroke-width="5.5"
+            stroke-linecap="round" stroke-linejoin="round"/>
+
+      <!-- barras ascendentes (ámbito organizacional) -->
+      <g fill="url(#gViolet)">
+        <rect x="46" y="130" width="10" height="26" rx="2.5"/>
+        <rect x="59" y="116" width="10" height="40" rx="2.5"/>
+        <rect x="72" y="102" width="10" height="54" rx="2.5"/>
+      </g>
+
+      <!-- símbolo Psi -->
+      <g fill="none" stroke="url(#gSilver)" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M63 88 C62 100 68 104 69 110
+                 C71 124 82 132 100 132
+                 C118 132 129 124 131 110
+                 C132 104 138 100 137 88"
+              stroke-width="7"/>
+        <path d="M100 74 L100 158" stroke-width="8"/>
+      </g>
+
+      <!-- hojas (crecimiento) -->
+      <g fill="url(#gViolet)">
+        <path d="M100 140 C84 140 73 150 71 165 C86 167 97 156 100 140 Z"/>
+        <path d="M100 140 C116 140 127 150 129 165 C114 167 103 156 100 140 Z"/>
+      </g>
+
+      <!-- guiño Pokémon -->
+      <g>
+        <path d="M80 48 A20 20 0 0 1 120 48 Z" fill="url(#gViolet)"/>
+        <path d="M80 48 A20 20 0 0 0 120 48 Z" fill="url(#gSilver)"/>
+        <rect x="79" y="44.5" width="42" height="7" fill="#0B0714"/>
+        <circle cx="100" cy="48" r="8" fill="#0B0714"/>
+        <circle cx="100" cy="48" r="4.5" fill="url(#gSilver)"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ============================================================
+     HEADER
+     ============================================================ -->
+<header class="header" id="header">
+  <div class="container header__inner">
+
+    <a class="brand" href="#inicio" aria-label="Oswaldo Vassaux — inicio">
+      <svg class="mark mark--nav" viewBox="0 0 200 200" aria-hidden="true" focusable="false"><use href="#mark"/></svg>
+      <span class="brand__text">
+        <span class="brand__name">Oswaldo Vassaux</span>
+        <span class="brand__role">Psicología Clínica e Industrial</span>
+      </span>
+    </a>
+
+    <button class="nav__toggle" id="navToggle" type="button"
+            aria-expanded="false" aria-controls="primaryNav" aria-label="Abrir menú de navegación">
+      <span class="nav__toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
+
+    <nav class="nav" id="primaryNav" aria-label="Navegación principal">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="#sobre-mi">Sobre mí</a></li>
+        <li><a class="nav__link" href="#vision">Visión</a></li>
+        <li><a class="nav__link" href="#areas">Áreas</a></li>
+        <li><a class="nav__link" href="#valores">Valores</a></li>
+        <li><a class="nav__link" href="#contenido">Contenido</a></li>
+        <li><a class="nav__link" href="#simbolo">Símbolo</a></li>
+      </ul>
+      <a class="btn btn--primary" href="#contacto">Hablemos</a>
+    </nav>
+
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero" id="inicio">
+  <div class="container hero__grid">
+
+    <div class="hero__mark-wrap reveal">
+      <span class="hero__halo" aria-hidden="true"></span>
+      <svg class="mark mark--hero" viewBox="0 0 200 200" role="img"
+           aria-label="Emblema de Oswaldo Vassaux: símbolo Psi sobre un perfil humano, con barras ascendentes, hojas y una referencia a Pokémon.">
+        <use href="#mark"/>
+      </svg>
+    </div>
+
+    <div>
+      <h1 class="hero__name reveal" style="--reveal-delay:60ms">Oswaldo Vassaux</h1>
+      <p class="hero__role reveal" style="--reveal-delay:120ms">Psicología Clínica e Industrial</p>
+
+      <p class="hero__tagline reveal" style="--reveal-delay:180ms">
+        Comprender la mente. <em>Potenciar a la persona.</em>
+      </p>
+
+      <div class="hero__body reveal" style="--reveal-delay:240ms">
+        <p>
+          La psicología es, para mí, una herramienta para comprender aquello que muchas veces
+          no podemos expresar con palabras: nuestros pensamientos, emociones, comportamientos,
+          relaciones y la manera en que nos desenvolvemos en los diferentes espacios de nuestra vida.
+        </p>
+        <p>
+          Mi propósito es integrar una mirada humana y profesional de la psicología, enfocándome
+          tanto en el bienestar individual como en el desarrollo de las personas dentro de los
+          espacios laborales y organizacionales.
+        </p>
+      </div>
+
+      <ul class="hero__pillars reveal" style="--reveal-delay:300ms">
+        <li class="pillar">Empatía</li>
+        <li class="pillar">Confianza</li>
+        <li class="pillar">Profesionalismo</li>
+        <li class="pillar">Crecimiento</li>
+      </ul>
+
+      <div class="hero__actions reveal" style="--reveal-delay:360ms">
+        <a class="btn btn--primary" href="#contacto">
+          Hablemos de psicología
+          <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16"/><path d="m14 6 6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn--ghost" href="#areas">Conocer mis áreas</a>
+      </div>
+
+      <a class="hero__scroll" href="#sobre-mi">
+        Continuar
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<div class="container"><hr class="rule"></div>
+
+<!-- ============================================================
+     SOBRE MÍ
+     ============================================================ -->
+<section class="section" id="sobre-mi">
+  <div class="container">
+
+    <header class="section__head reveal">
+      <p class="eyebrow">Sobre mí</p>
+      <h2 class="section__title">Una mirada humana hacia la psicología</h2>
+    </header>
+
+    <div class="prose reveal" style="--reveal-delay:80ms">
+      <p>
+        Soy <strong>Oswaldo Esteban Vassaux Figueroa</strong>, estudiante de Psicología con interés
+        en dos áreas que considero muy importantes en la actualidad: la <strong>Psicología Clínica</strong>
+        y la <strong>Psicología Industrial/Organizacional</strong>.
+      </p>
+      <p>
+        Dentro del ámbito clínico, mi principal interés se encuentra en el enfoque psicoanalítico,
+        especialmente en la comprensión de los procesos inconscientes, la historia personal, los
+        vínculos y aquellos patrones que pueden influir en nuestra manera de relacionarnos con
+        nosotros mismos y con los demás.
+      </p>
+      <p>
+        Al mismo tiempo, la Psicología Industrial me permite explorar cómo las personas se
+        desarrollan dentro de las organizaciones, cómo influyen las relaciones laborales en nuestro
+        bienestar y cómo la psicología puede contribuir a construir espacios de trabajo más
+        saludables y humanos.
+      </p>
+      <p>
+        Considero que una persona no puede separarse completamente de los diferentes contextos
+        en los que vive. Somos individuos con una historia, emociones, necesidades y metas; pero
+        también somos estudiantes, profesionales, compañeros, líderes, colaboradores y miembros
+        de diferentes grupos.
+      </p>
+      <p><em>Por eso, mi visión de la psicología busca comprender a la persona de manera integral.</em></p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     MI VISIÓN
+     ============================================================ -->
+<section class="section section--tight" id="vision">
+  <div class="container">
+
+    <header class="section__head section__head--center reveal">
+      <p class="eyebrow">Mi visión</p>
+      <h2 class="section__title">Comprender antes de intervenir.</h2>
+      <p class="section__lead">
+        Creo que la psicología comienza con algo fundamental: escuchar y comprender.
+      </p>
+    </header>
+
+    <div class="areas">
+      <article class="panel panel--interactive reveal">
+        <h3 class="panel__title">Detrás de cada señal, un significado</h3>
+        <p class="panel__text">
+          No todas las personas viven las mismas experiencias de la misma manera. Detrás de una
+          conducta existe una historia; detrás de una emoción existe un significado; y detrás de
+          muchas dificultades existen necesidades que merecen ser comprendidas.
+        </p>
+      </article>
+
+      <article class="panel panel--interactive reveal" style="--reveal-delay:100ms">
+        <h3 class="panel__title">Ciencia, criterio y sensibilidad</h3>
+        <p class="panel__text">
+          Mi objetivo es acercarme a la psicología desde una perspectiva que combine conocimiento
+          científico, pensamiento crítico y sensibilidad humana. Porque comprender no significa
+          justificarlo todo: significa tener la oportunidad de observarnos con mayor claridad para
+          decidir qué queremos transformar.
+        </p>
+      </article>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     ÁREAS DE INTERÉS
+     ============================================================ -->
+<section class="section" id="areas">
+  <div class="container">
+
+    <header class="section__head section__head--center reveal">
+      <p class="eyebrow">Áreas de interés</p>
+      <h2 class="section__title">Dos caminos, una misma perspectiva</h2>
+    </header>
+
+    <div class="areas">
+
+      <!-- Clínica -->
+      <article class="panel area reveal">
+        <span class="area__badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 5.2a3.2 3.2 0 0 0-5.9-1.6A3 3 0 0 0 3.4 8a3.2 3.2 0 0 0 .6 5.6A3.2 3.2 0 0 0 7.5 18a3.2 3.2 0 0 0 4.5.4Z"/>
+            <path d="M12 5.2a3.2 3.2 0 0 1 5.9-1.6A3 3 0 0 1 20.6 8a3.2 3.2 0 0 1-.6 5.6A3.2 3.2 0 0 1 16.5 18a3.2 3.2 0 0 1-4.5.4Z"/>
+            <path d="M12 5.2v13.2"/>
+          </svg>
+          Psicología Clínica
+        </span>
+
+        <div>
+          <h3 class="area__title">Comprender el mundo interno</h3>
+          <p class="area__sub">Enfoque psicoanalítico</p>
+        </div>
+
+        <div>
+          <p class="area__text">
+            La Psicología Clínica busca comprender las experiencias emocionales, cognitivas y
+            conductuales que forman parte de la vida de cada persona.
+          </p>
+          <p class="area__text">
+            Mi interés clínico se encuentra particularmente relacionado con el enfoque
+            psicoanalítico, que permite explorar aspectos profundos de la experiencia humana,
+            incluyendo la historia personal, los vínculos, los conflictos internos y los procesos
+            inconscientes.
+          </p>
+        </div>
+
+        <div>
+          <p class="chips__label" id="chips-clinica">Temas de interés</p>
+          <ul class="chips" aria-labelledby="chips-clinica">
+            <li class="chip">Autoconocimiento</li>
+            <li class="chip">Relaciones interpersonales</li>
+            <li class="chip">Apego y vínculos</li>
+            <li class="chip">Emociones y conducta</li>
+            <li class="chip">Procesos inconscientes</li>
+            <li class="chip">Historia personal</li>
+            <li class="chip">Patrones de comportamiento</li>
+            <li class="chip">Desarrollo personal</li>
+            <li class="chip">Bienestar psicológico</li>
+          </ul>
+        </div>
+
+        <blockquote class="quote">
+          Conocernos no siempre cambia nuestro pasado, pero puede cambiar la manera en que
+          comprendemos nuestro presente.
+        </blockquote>
+      </article>
+
+      <!-- Industrial -->
+      <article class="panel area reveal" style="--reveal-delay:100ms">
+        <span class="area__badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2.5" y="7" width="19" height="13" rx="2"/>
+            <path d="M8.5 7V5.5a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2V7"/>
+            <path d="M2.5 12.5h19"/>
+          </svg>
+          Psicología Industrial
+        </span>
+
+        <div>
+          <h3 class="area__title">Comprender a las personas dentro de las organizaciones</h3>
+          <p class="area__sub">Ámbito organizacional</p>
+        </div>
+
+        <div>
+          <p class="area__text">
+            Las organizaciones están formadas por personas. Por eso, comprender el comportamiento
+            humano es fundamental para construir equipos, liderazgos y espacios laborales más
+            saludables.
+          </p>
+          <p class="area__text">
+            Mi interés en la Psicología Industrial y Organizacional se centra en comprender cómo
+            las personas interactúan dentro del trabajo y cómo diferentes factores psicológicos
+            pueden influir en su desempeño, motivación y bienestar.
+          </p>
+        </div>
+
+        <div>
+          <p class="chips__label" id="chips-industrial">Temas de interés</p>
+          <ul class="chips" aria-labelledby="chips-industrial">
+            <li class="chip">Liderazgo</li>
+            <li class="chip">Motivación laboral</li>
+            <li class="chip">Comunicación</li>
+            <li class="chip">Trabajo en equipo</li>
+            <li class="chip">Clima organizacional</li>
+            <li class="chip">Cultura organizacional</li>
+            <li class="chip">Selección de personal</li>
+            <li class="chip">Desarrollo profesional</li>
+            <li class="chip">Inteligencia emocional</li>
+            <li class="chip">Bienestar laboral</li>
+            <li class="chip">Manejo de conflictos</li>
+            <li class="chip">Desarrollo de habilidades</li>
+          </ul>
+        </div>
+
+        <blockquote class="quote">
+          Una organización puede tener grandes objetivos, pero son las personas quienes hacen
+          posible alcanzarlos.
+        </blockquote>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONVERGENCIA
+     ============================================================ -->
+<section class="section section--tight" id="persona">
+  <div class="container">
+    <div class="converge reveal">
+
+      <div>
+        <p class="eyebrow" style="justify-content:center">Una psicología centrada en la persona</p>
+        <p class="converge__statement">
+          Detrás de cada conducta existe <strong>una persona</strong>.
+        </p>
+      </div>
+
+      <p class="section__lead" style="text-align:center;margin-inline:auto">
+        Una persona que piensa, siente, tiene una historia, establece vínculos, enfrenta
+        dificultades y busca desarrollarse. Mi interés es construir un espacio profesional que
+        permita observar tanto al individuo como al contexto en el que se desarrolla.
+      </p>
+
+      <div class="converge__cols">
+        <div class="converge__col">
+          <h3>En la clínica</h3>
+          <p>Significa comprender el mundo interno.</p>
+        </div>
+        <div class="converge__col">
+          <h3>En las organizaciones</h3>
+          <p>Significa comprender cómo ese mundo interactúa con otras personas y con el entorno laboral.</p>
+        </div>
+      </div>
+
+      <p class="converge__goal">En ambos casos, el objetivo es el mismo: comprender para favorecer el crecimiento.</p>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     VALORES
+     ============================================================ -->
+<section class="section" id="valores">
+  <div class="container">
+
+    <header class="section__head section__head--center reveal">
+      <p class="eyebrow">Mis valores</p>
+      <h2 class="section__title">Lo que sostiene mi manera de trabajar</h2>
+    </header>
+
+    <div class="values">
+      <article class="value reveal">
+        <h3 class="value__title">Empatía</h3>
+        <p class="value__text">Escuchar sin reducir a una persona a una etiqueta, diagnóstico o problema.</p>
+      </article>
+      <article class="value reveal" style="--reveal-delay:80ms">
+        <h3 class="value__title">Confianza</h3>
+        <p class="value__text">Construir espacios donde la comunicación pueda desarrollarse desde el respeto y la seguridad.</p>
+      </article>
+      <article class="value reveal" style="--reveal-delay:160ms">
+        <h3 class="value__title">Profesionalismo</h3>
+        <p class="value__text">Basar mi trabajo en la formación psicológica, el pensamiento crítico y una práctica responsable.</p>
+      </article>
+      <article class="value reveal" style="--reveal-delay:240ms">
+        <h3 class="value__title">Crecimiento</h3>
+        <p class="value__text">Entender el desarrollo personal y profesional como un proceso continuo de aprendizaje y transformación.</p>
+      </article>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     FILOSOFÍA
+     ============================================================ -->
+<section class="section section--tight" id="filosofia">
+  <div class="container philosophy">
+
+    <p class="eyebrow reveal" style="justify-content:center">Mi filosofía</p>
+
+    <h2 class="philosophy__statement reveal" style="--reveal-delay:60ms">
+      No se trata solamente de cambiar. Se trata de comprender <em>qué queremos cambiar y por qué.</em>
+    </h2>
+
+    <div class="prose reveal" style="--reveal-delay:120ms">
+      <p>
+        Vivimos en una sociedad que constantemente nos invita a ser mejores, producir más,
+        alcanzar más y avanzar más rápido. Pero crecer no siempre significa hacer más.
+      </p>
+    </div>
+
+    <ul class="beats reveal" style="--reveal-delay:180ms">
+      <li class="beat">Detenernos</li>
+      <li class="beat">Escucharnos</li>
+      <li class="beat">Comprender nuestra historia</li>
+      <li class="beat">Reconocer nuestros patrones</li>
+      <li class="beat">Aceptar nuestras dificultades</li>
+    </ul>
+
+    <div class="prose reveal" style="--reveal-delay:240ms">
+      <p>
+        Y desde ahí decidir hacia dónde queremos avanzar. Por eso, entiendo el crecimiento como un
+        proceso que comienza con el <strong>autoconocimiento</strong> y continúa con la posibilidad
+        de construir nuevas formas de relacionarnos con nosotros mismos, con los demás y con
+        nuestro entorno.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTENIDO Y PSICOEDUCACIÓN
+     ============================================================ -->
+<section class="section" id="contenido">
+  <div class="container">
+
+    <header class="section__head reveal">
+      <p class="eyebrow">Contenido y psicoeducación</p>
+      <h2 class="section__title">Psicología para comprender la vida cotidiana</h2>
+      <p class="section__lead">
+        La psicología no debería limitarse a un consultorio o a un salón de clases. Forma parte de
+        nuestras relaciones, decisiones, emociones, familias, estudios y trabajos.
+      </p>
+    </header>
+
+    <div class="prose reveal" style="--reveal-delay:80ms">
+      <p>
+        A través de contenido psicoeducativo busco acercar conceptos de psicología a situaciones de
+        la vida cotidiana de una manera clara, responsable y comprensible.
+      </p>
+    </div>
+
+    <div class="topics">
+      <article class="panel panel--interactive reveal">
+        <h3 class="panel__title">Psicología Clínica</h3>
+        <ul class="chips" style="margin-top:var(--space-4)">
+          <li class="chip">Emociones</li>
+          <li class="chip">Apego</li>
+          <li class="chip">Relaciones</li>
+          <li class="chip">Mecanismos de defensa</li>
+          <li class="chip">Autoconocimiento</li>
+          <li class="chip">Psicoanálisis</li>
+          <li class="chip">Conducta humana</li>
+        </ul>
+      </article>
+
+      <article class="panel panel--interactive reveal" style="--reveal-delay:100ms">
+        <h3 class="panel__title">Psicología Industrial</h3>
+        <ul class="chips" style="margin-top:var(--space-4)">
+          <li class="chip">Liderazgo</li>
+          <li class="chip">Motivación</li>
+          <li class="chip">Comunicación</li>
+          <li class="chip">Equipos de trabajo</li>
+          <li class="chip">Bienestar laboral</li>
+          <li class="chip">Desarrollo profesional</li>
+          <li class="chip">Comportamiento organizacional</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="closing-note reveal">
+      <h3>Psicología sin complicaciones.</h3>
+      <p>Conceptos complejos explicados de una manera que puedas relacionar con tu propia experiencia.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     QUÉ PUEDES ENCONTRAR AQUÍ
+     ============================================================ -->
+<section class="section section--tight" id="explorar">
+  <div class="container">
+
+    <header class="section__head section__head--center reveal">
+      <p class="eyebrow">¿Qué puedes encontrar aquí?</p>
+      <h2 class="section__title">Cuatro maneras de acercarte</h2>
+    </header>
+
+    <div class="offers">
+
+      <article class="offer reveal">
+        <span class="offer__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 5.2a3.2 3.2 0 0 0-5.9-1.6A3 3 0 0 0 3.4 8a3.2 3.2 0 0 0 .6 5.6A3.2 3.2 0 0 0 7.5 18a3.2 3.2 0 0 0 4.5.4Z"/>
+            <path d="M12 5.2a3.2 3.2 0 0 1 5.9-1.6A3 3 0 0 1 20.6 8a3.2 3.2 0 0 1-.6 5.6A3.2 3.2 0 0 1 16.5 18a3.2 3.2 0 0 1-4.5.4Z"/>
+            <path d="M12 5.2v13.2"/>
+          </svg>
+        </span>
+        <h3 class="offer__title">Psicología Clínica</h3>
+        <p class="offer__text">Una mirada profunda hacia la mente, las emociones, los vínculos y la experiencia personal.</p>
+      </article>
+
+      <article class="offer reveal" style="--reveal-delay:80ms">
+        <span class="offer__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2.5" y="7" width="19" height="13" rx="2"/>
+            <path d="M8.5 7V5.5a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2V7"/>
+            <path d="M2.5 12.5h19"/>
+          </svg>
+        </span>
+        <h3 class="offer__title">Psicología Industrial</h3>
+        <p class="offer__text">Psicología aplicada al mundo laboral, las organizaciones y el desarrollo profesional.</p>
+      </article>
+
+      <article class="offer reveal" style="--reveal-delay:160ms">
+        <span class="offer__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 21v-8"/>
+            <path d="M12 13c0-4 3-7 8-7 0 5-3 8-8 8Z"/>
+            <path d="M12 16.5c0-3-2.2-5.5-6-5.5 0 3.6 2.2 5.5 6 5.5Z"/>
+          </svg>
+        </span>
+        <h3 class="offer__title">Crecimiento</h3>
+        <p class="offer__text">Reflexiones y herramientas para comprendernos y desarrollarnos.</p>
+      </article>
+
+      <article class="offer reveal" style="--reveal-delay:240ms">
+        <span class="offer__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 6.5C10.3 5 7.9 4.3 3.5 4.3v13c4.4 0 6.8.7 8.5 2.2 1.7-1.5 4.1-2.2 8.5-2.2v-13c-4.4 0-6.8.7-8.5 2.2Z"/>
+            <path d="M12 6.5v13"/>
+          </svg>
+        </span>
+        <h3 class="offer__title">Psicoeducación</h3>
+        <p class="offer__text">Contenido psicológico explicado de forma clara, responsable y cercana.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     MI SÍMBOLO
+     ============================================================ -->
+<section class="section" id="simbolo">
+  <div class="container">
+
+    <header class="section__head reveal">
+      <p class="eyebrow">Mi símbolo</p>
+      <h2 class="section__title">Una identidad construida alrededor del crecimiento</h2>
+      <p class="section__lead">
+        Mi identidad visual combina diferentes elementos que representan mi manera de entender
+        la psicología.
+      </p>
+    </header>
+
+    <div class="symbol">
+
+      <div class="symbol__stage reveal">
+        <svg class="mark mark--panel" viewBox="0 0 200 200" aria-hidden="true" focusable="false"><use href="#mark"/></svg>
+      </div>
+
+      <ul class="legend reveal" style="--reveal-delay:100ms">
+
+        <li class="legend__item">
+          <span class="legend__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 4v16"/><path d="M5 7v4a7 7 0 0 0 14 0V7"/>
+            </svg>
+          </span>
+          <div>
+            <h3 class="legend__title">Psi (Ψ)</h3>
+            <p class="legend__text">Representa la psicología, la mente y la comprensión profunda del ser humano.</p>
+          </div>
+        </li>
+
+        <li class="legend__item">
+          <span class="legend__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="8.5" r="4"/><path d="M4.5 20a7.5 7.5 0 0 1 15 0"/>
+            </svg>
+          </span>
+          <div>
+            <h3 class="legend__title">Perfil humano</h3>
+            <p class="legend__text">Simboliza a la persona como centro de la práctica psicológica: la escucha activa y la empatía.</p>
+          </div>
+        </li>
+
+        <li class="legend__item">
+          <span class="legend__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 20v-7"/><path d="M12 20V6"/><path d="M19 20v-9"/>
+            </svg>
+          </span>
+          <div>
+            <h3 class="legend__title">Barras ascendentes</h3>
+            <p class="legend__text">Representan el desarrollo, el ámbito profesional y el crecimiento dentro de las organizaciones.</p>
+          </div>
+        </li>
+
+        <li class="legend__item">
+          <span class="legend__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 4c0 8-4.5 13-11 13H5c0-8 4.5-13 11-13h4Z"/><path d="M5 20c0-4 3-8 8-10"/>
+            </svg>
+          </span>
+          <div>
+            <h3 class="legend__title">Hojas</h3>
+            <p class="legend__text">Simbolizan la transformación, el crecimiento y la evolución personal.</p>
+          </div>
+        </li>
+
+        <li class="legend__item">
+          <span class="legend__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9"/><path d="M3 12h6"/><path d="M15 12h6"/><circle cx="12" cy="12" r="3"/>
+            </svg>
+          </span>
+          <div>
+            <h3 class="legend__title">Inspiración Pokémon</h3>
+            <p class="legend__text">Un guiño personal a una de mis aficiones. La idea de evolución representa pasión, disciplina, estrategia y crecimiento constante.</p>
+          </div>
+        </li>
+
+        <li class="legend__item">
+          <span class="legend__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="8" cy="9" r="4.5"/><circle cx="16" cy="15" r="4.5"/>
+            </svg>
+          </span>
+          <div>
+            <h3 class="legend__title">Violeta y plateado</h3>
+            <p class="legend__text">Buscan transmitir una combinación de profundidad, profesionalismo, confianza y modernidad.</p>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+
+    <p class="symbol__closing reveal">
+      Crecer no significa dejar de ser quienes somos; significa desarrollar nuestro potencial.
+    </p>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTACTO
+     ============================================================ -->
+<section class="section" id="contacto">
+  <div class="container">
+    <div class="contact reveal">
+
+      <p class="eyebrow" style="justify-content:center">Contacto</p>
+      <h2 class="section__title">Hablemos de psicología</h2>
+      <p class="section__lead" style="margin-inline:auto">
+        Si deseas conocer más sobre mi trabajo, proyectos, contenido o colaboraciones,
+        puedes ponerte en contacto conmigo.
+      </p>
+
+      <!-- ▼▼ EDITAR: reemplaza los href y el texto visible con tus datos reales ▼▼ -->
+      <div class="contact__links">
+
+        <a class="contact__link" href="mailto:tucorreo@ejemplo.com">
+          <span class="contact__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="m3 6.5 9 6.5 9-6.5"/>
+            </svg>
+          </span>
+          <span class="contact__meta">
+            <span class="contact__label">Correo electrónico</span>
+            <span class="contact__value">tucorreo@ejemplo.com</span>
+          </span>
+        </a>
+
+        <a class="contact__link" href="https://instagram.com/tuusuario" target="_blank" rel="noopener noreferrer">
+          <span class="contact__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/>
+              <circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/>
+            </svg>
+          </span>
+          <span class="contact__meta">
+            <span class="contact__label">Instagram</span>
+            <span class="contact__value">@tuusuario</span>
+          </span>
+        </a>
+
+        <a class="contact__link" href="https://linkedin.com/in/tuperfil" target="_blank" rel="noopener noreferrer">
+          <span class="contact__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="3"/>
+              <path d="M7.5 10.5V17"/><circle cx="7.5" cy="7.2" r="1.15" fill="currentColor" stroke="none"/>
+              <path d="M11.5 17v-3.8a2.6 2.6 0 0 1 5.2 0V17"/><path d="M11.5 10.5V17"/>
+            </svg>
+          </span>
+          <span class="contact__meta">
+            <span class="contact__label">LinkedIn</span>
+            <span class="contact__value">Tu perfil</span>
+          </span>
+        </a>
+
+      </div>
+      <!-- ▲▲ FIN EDITAR ▲▲ -->
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FRASE FINAL
+     ============================================================ -->
+<section class="closing">
+  <div class="container">
+    <blockquote class="closing__quote reveal">
+      No soy lo que me sucedió, <em>soy lo que elijo ser.</em>
+    </blockquote>
+    <p class="closing__attr reveal" style="--reveal-delay:80ms">
+      <strong>Oswaldo Vassaux</strong>
+      Psicología Clínica e Industrial
+    </p>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <svg class="mark mark--nav" viewBox="0 0 200 200" aria-hidden="true" focusable="false"><use href="#mark"/></svg>
+    <p class="footer__note">
+      © <span id="year">2026</span> Oswaldo Esteban Vassaux Figueroa · Psicología Clínica e Industrial
+    </p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
