@@ -11,6 +11,11 @@
 <meta property="og:locale" content="es_GT">
 <meta property="og:title" content="Oswaldo Vassaux — Psicología Clínica e Industrial">
 <meta property="og:description" content="Comprender la mente. Potenciar a la persona.">
+<meta property="og:image" content="assets/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,86 +27,7 @@
 
 <a class="skip-link" href="#main">Saltar al contenido principal</a>
 
-<!-- ============================================================
-     BRAND MARK — emblema reutilizable
-     ============================================================ -->
-<svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
-  <defs>
-    <!-- userSpaceOnUse: un trazo vertical tiene bounding box de ancho 0,
-         así que objectBoundingBox haría desaparecer el tallo del Psi. -->
-    <linearGradient id="gSilver" gradientUnits="userSpaceOnUse" x1="45" y1="25" x2="170" y2="175">
-      <stop offset="0%"   stop-color="#F5F5FA"/>
-      <stop offset="45%"  stop-color="#C6C6D6"/>
-      <stop offset="100%" stop-color="#8A8A9E"/>
-    </linearGradient>
-    <linearGradient id="gViolet" gradientUnits="userSpaceOnUse" x1="45" y1="95" x2="140" y2="170">
-      <stop offset="0%"   stop-color="#C9B6FD"/>
-      <stop offset="55%"  stop-color="#8B5CF6"/>
-      <stop offset="100%" stop-color="#6D28D9"/>
-    </linearGradient>
-    <linearGradient id="gRing" gradientUnits="userSpaceOnUse" x1="25" y1="170" x2="175" y2="30">
-      <stop offset="0%"   stop-color="#6D28D9"/>
-      <stop offset="45%"  stop-color="#A78BFA"/>
-      <stop offset="100%" stop-color="#DFDFEA"/>
-    </linearGradient>
-
-    <symbol id="mark" viewBox="0 0 200 200">
-      <!-- anillo (mitad izquierda) -->
-      <path d="M100 22 A78 78 0 0 0 100 178"
-            fill="none" stroke="url(#gRing)" stroke-width="5.5" stroke-linecap="round"/>
-
-      <!-- perfil humano (mitad derecha): frente, ceja, nariz, labios, mentón -->
-      <path d="M100 22 C136 22 164 46 169 78
-               C172 93 167 101 162 109
-               C159 112 158 113 160 115
-               C166 120 180 122 180 129
-               C180 133 168 132 164 135
-               C160 138 168 138 168 141
-               C168 145 162 144 163 148
-               C164 152 169 154 167 159
-               C164 166 154 169 148 172
-               C132 179 116 178 100 178"
-            fill="none" stroke="url(#gSilver)" stroke-width="6"
-            stroke-linecap="round" stroke-linejoin="round"/>
-
-      <!-- barras (ámbito organizacional) -->
-      <g fill="url(#gViolet)">
-        <rect x="35" y="100" width="12" height="40" rx="2"/>
-        <rect x="49" y="90"  width="12" height="50" rx="2"/>
-        <rect x="63" y="110" width="12" height="30" rx="2"/>
-      </g>
-
-      <!-- hojas (crecimiento) -->
-      <g fill="url(#gViolet)">
-        <path d="M100 147 Q79.6 154.8 74 176 Q94.4 168.2 100 147 Z"/>
-        <path d="M100 160 Q106.2 140.7 126 136 Q119.8 155.3 100 160 Z"/>
-      </g>
-      <g fill="none" stroke="#3B1D75" stroke-width="1.3" stroke-linecap="round" opacity="0.45">
-        <path d="M99 149 L76 174"/>
-        <path d="M101 158 L124 138"/>
-      </g>
-
-      <!-- símbolo Psi (tridente): brazos curvos con la punta abierta hacia afuera
-           + prong central rematado en punta y tallo que baja completo -->
-      <path d="M48 70 C55 80 59 94 61 110
-               C64 125 79 133 100 133
-               C121 133 136 125 139 110
-               C141 94 145 80 152 70"
-            fill="none" stroke="url(#gSilver)" stroke-width="12"
-            stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M100 64 L105 78 L105 158 L100 172 L95 158 L95 78 Z" fill="url(#gSilver)"/>
-
-      <!-- guiño Pokémon -->
-      <g>
-        <path d="M80 42 A20 20 0 0 1 120 42 Z" fill="url(#gViolet)"/>
-        <path d="M80 42 A20 20 0 0 0 120 42 Z" fill="url(#gSilver)"/>
-        <rect x="79" y="38.5" width="42" height="7" fill="#0B0714"/>
-        <circle cx="100" cy="42" r="8" fill="#0B0714"/>
-        <circle cx="100" cy="42" r="4.5" fill="url(#gSilver)"/>
-      </g>
-    </symbol>
-  </defs>
-</svg>
+<!-- Emblema de marca: assets/img/marca.png -->
 
 <!-- ============================================================
      HEADER
@@ -110,7 +36,7 @@
   <div class="container header__inner">
 
     <a class="brand" href="#inicio" aria-label="Oswaldo Vassaux — inicio">
-      <svg class="mark mark--nav" viewBox="0 0 200 200" aria-hidden="true" focusable="false"><use href="#mark"/></svg>
+      <img class="mark mark--nav" src="assets/img/marca.png" alt="" width="640" height="640" decoding="async">
       <span class="brand__text">
         <span class="brand__name">Oswaldo Vassaux</span>
         <span class="brand__role">Psicología Clínica e Industrial</span>
@@ -147,10 +73,9 @@
 
     <div class="hero__mark-wrap reveal">
       <span class="hero__halo" aria-hidden="true"></span>
-      <svg class="mark mark--hero" viewBox="0 0 200 200" role="img"
-           aria-label="Emblema de Oswaldo Vassaux: símbolo Psi sobre un perfil humano, con barras ascendentes, hojas y una referencia a Pokémon.">
-        <use href="#mark"/>
-      </svg>
+      <img class="mark mark--hero" src="assets/img/marca.png"
+           alt="Emblema de Oswaldo Vassaux: símbolo Psi sobre un perfil humano, con barras ascendentes, hojas y una referencia a Pokémon."
+           width="640" height="640" fetchpriority="high" decoding="async">
     </div>
 
     <div>
@@ -648,7 +573,7 @@
     <div class="symbol">
 
       <div class="symbol__stage reveal">
-        <svg class="mark mark--panel" viewBox="0 0 200 200" aria-hidden="true" focusable="false"><use href="#mark"/></svg>
+        <img class="mark mark--panel" src="assets/img/marca.png" alt="" width="640" height="640" loading="lazy" decoding="async">
       </div>
 
       <ul class="legend reveal" style="--reveal-delay:100ms">
@@ -820,7 +745,7 @@
      ============================================================ -->
 <footer class="footer">
   <div class="container footer__inner">
-    <svg class="mark mark--nav" viewBox="0 0 200 200" aria-hidden="true" focusable="false"><use href="#mark"/></svg>
+    <img class="mark mark--nav" src="assets/img/marca.png" alt="" width="640" height="640" loading="lazy" decoding="async">
     <p class="footer__note">
       © <span id="year">2026</span> Oswaldo Esteban Vassaux Figueroa · Psicología Clínica e Industrial
     </p>
