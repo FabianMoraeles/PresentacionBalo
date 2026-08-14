@@ -9,3 +9,6 @@ desktop.ini
 # Dependencias / build
 node_modules/
 .vercel/
+
+.vercel
+.env*
