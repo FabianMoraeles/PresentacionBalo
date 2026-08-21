@@ -63,23 +63,16 @@
 <main id="main">
 
 <!-- ============================================================
-     HERO — bienvenida + foto personal
+     HERO — bienvenida
      ============================================================ -->
 <section class="hero" id="inicio">
   <div class="container hero__grid">
 
-    <div class="hero__photo-wrap reveal">
+    <div class="hero__mark-wrap reveal">
       <span class="hero__halo" aria-hidden="true"></span>
-      <!--
-        Reemplazar este bloque por la fotografía real:
-        <img class="hero__photo" src="assets/img/foto-oswaldo.jpg"
-             alt="Oswaldo Vassaux" width="640" height="640">
-      -->
-      <span class="avatar-placeholder" role="img" aria-label="Retrato de Oswaldo Vassaux — fotografía próximamente">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <circle cx="12" cy="8.5" r="4"/><path d="M4.5 20a7.5 7.5 0 0 1 15 0"/>
-        </svg>
-      </span>
+      <img class="mark mark--hero" src="assets/img/marca.png"
+           alt="Emblema de Oswaldo Vassaux: símbolo Psi sobre un perfil humano, con barras ascendentes, hojas y una referencia a Pokémon."
+           width="640" height="640" fetchpriority="high" decoding="async">
     </div>
 
     <div>
@@ -116,6 +109,39 @@
       </div>
     </div>
 
+  </div>
+</section>
+
+<!-- ============================================================
+     RETRATO — apartado de foto personal
+     ============================================================ -->
+<section class="section section--tight">
+  <div class="container">
+    <div class="portrait-section reveal">
+
+      <div class="portrait-wrap">
+        <!--
+          Reemplazar este bloque por la fotografía real:
+          <img class="portrait-photo" src="assets/img/foto-oswaldo.jpg"
+               alt="Oswaldo Vassaux" width="640" height="640">
+        -->
+        <span class="avatar-placeholder" role="img" aria-label="Retrato de Oswaldo Vassaux — fotografía próximamente">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="8.5" r="4"/><path d="M4.5 20a7.5 7.5 0 0 1 15 0"/>
+          </svg>
+        </span>
+      </div>
+
+      <div class="portrait-section__text">
+        <p class="eyebrow">Quién escribe esto</p>
+        <p>
+          Detrás del símbolo hay una persona: estudiante de Psicología, curioso
+          por naturaleza y en proceso constante de aprender a comprenderse mejor
+          a sí mismo antes que a los demás.
+        </p>
+      </div>
+
+    </div>
   </div>
 </section>
 
