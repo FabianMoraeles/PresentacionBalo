@@ -396,7 +396,7 @@ ul { list-style: none; padding: 0; }
   cursor: pointer;
 }
 .nav__link:hover { color: var(--color-text); background-color: rgba(199, 198, 224, 0.07); }
-.nav__link[aria-current="true"] {
+.nav__link[aria-current="page"] {
   color: var(--color-violet-200);
   background-color: rgba(139, 92, 246, 0.16);
 }
@@ -1309,6 +1309,149 @@ ul { list-style: none; padding: 0; }
   .value:hover,
   .offer:hover,
   .contact__link:hover { transform: none; }
+}
+
+/* --------------------------------------------------------------------------
+   19b. FOTO DEL HERO (Home) + CABECERAS DE PÁGINA SECUNDARIAS
+   -------------------------------------------------------------------------- */
+
+.hero__photo-wrap {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: clamp(200px, 46vw, 320px);
+  aspect-ratio: 1;
+}
+
+.hero__photo {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--color-border-strong);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  z-index: 1;
+  background: var(--color-surface-2);
+}
+
+/* Marco de respaldo: se ve intencional aun sin fotografía cargada */
+.avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--color-border-strong);
+  background:
+    radial-gradient(circle at 38% 30%, rgba(139, 92, 246, 0.24), transparent 60%),
+    linear-gradient(160deg, rgba(30, 21, 55, 0.85), rgba(16, 10, 28, 0.7));
+  color: var(--color-silver-400);
+  position: relative;
+  z-index: 1;
+}
+.avatar-placeholder svg { width: 42%; height: 42%; opacity: 0.6; }
+
+.page-hero {
+  padding-block: var(--space-9) var(--space-8);
+  text-align: center;
+}
+.page-hero .eyebrow { justify-content: center; }
+.page-hero__title {
+  font-size: clamp(2rem, 1.4rem + 2.4vw, var(--text-4xl));
+  margin-bottom: var(--space-4);
+}
+.page-hero__lead {
+  font-size: var(--text-lg);
+  color: var(--color-text-muted);
+  max-width: 56ch;
+  margin-inline: auto;
+}
+
+/* --------------------------------------------------------------------------
+   19c. LISTADO DE BLOG
+   -------------------------------------------------------------------------- */
+
+.blog-list { display: grid; grid-template-columns: 1fr; gap: var(--space-6); }
+
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-7);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(160deg, rgba(30, 21, 55, 0.55), rgba(16, 10, 28, 0.35));
+  transition: border-color var(--dur-base) var(--ease-out),
+              transform var(--dur-base) var(--ease-out);
+}
+.blog-card:hover { border-color: rgba(167, 139, 250, 0.42); transform: translateY(-3px); }
+
+.blog-card__meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-subtle);
+}
+.blog-card__meta time { color: var(--color-violet-300); }
+
+.blog-card__title { font-size: var(--text-2xl); }
+
+.blog-card__excerpt { color: var(--color-text-muted); font-size: var(--text-base); max-width: 62ch; }
+
+.blog-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-violet-300);
+  align-self: flex-start;
+  cursor: pointer;
+}
+.blog-card__link svg { width: 16px; height: 16px; transition: transform var(--dur-fast) var(--ease-out); }
+.blog-card__link:hover svg { transform: translateX(3px); }
+
+.blog-empty {
+  padding: var(--space-7);
+  border: 1px dashed var(--color-border-strong);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  color: var(--color-text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   19d. PLACEHOLDER DE PÁGINA (Portafolio en construcción)
+   -------------------------------------------------------------------------- */
+
+.coming-soon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+  text-align: center;
+  padding: var(--space-9) var(--space-6);
+  border: 1px dashed var(--color-border-strong);
+  border-radius: var(--radius-xl);
+}
+.coming-soon__icon {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-md);
+  background: rgba(139, 92, 246, 0.14);
+  color: var(--color-violet-300);
+}
+.coming-soon__icon svg { width: 30px; height: 30px; }
+
+@media (min-width: 640px) {
+  .blog-card { flex-direction: row; align-items: center; justify-content: space-between; }
+  .blog-card__body { flex: 1; }
 }
 
 /* --------------------------------------------------------------------------

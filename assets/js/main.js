@@ -114,41 +114,17 @@
   }
 
   /* ---------------------------------------------------------------
-     5. Sección activa en la navegación
+     5. Página activa en la navegación (sitio multi-página)
      --------------------------------------------------------------- */
-  var links = Array.prototype.slice.call(document.querySelectorAll('.nav__link'));
-  var sections = links
-    .map(function (link) { return document.querySelector(link.getAttribute('href')); })
-    .filter(Boolean);
+  var here = location.pathname.split('/').pop() || 'index.html';
 
-  if ('IntersectionObserver' in window && sections.length) {
-    var visible = new Set();
-
-    var markCurrent = function () {
-      var current = sections.find(function (section) { return visible.has(section.id); });
-
-      links.forEach(function (link) {
-        var isCurrent = current && link.getAttribute('href') === '#' + current.id;
-        if (isCurrent) {
-          link.setAttribute('aria-current', 'true');
-        } else {
-          link.removeAttribute('aria-current');
-        }
-      });
-    };
-
-    var sectionObserver = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          visible.add(entry.target.id);
-        } else {
-          visible.delete(entry.target.id);
-        }
-      });
-      markCurrent();
-    }, { rootMargin: '-40% 0px -50% 0px', threshold: 0 });
-
-    sections.forEach(function (section) { sectionObserver.observe(section); });
-  }
+  document.querySelectorAll('.nav__link').forEach(function (link) {
+    var target = link.getAttribute('href').split('/').pop();
+    if (target === here) {
+      link.setAttribute('aria-current', 'page');
+    } else {
+      link.removeAttribute('aria-current');
+    }
+  });
 
 })();

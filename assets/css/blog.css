@@ -1,0 +1,120 @@
+/* ==========================================================================
+   Overrides SOLO para el post del blog, según el checklist del curso:
+   - Tipografía sans-serif "de sistema" (no Google Fonts, no Playfair)
+   - Sin cursiva ni subrayado decorativo
+   - Párrafos y negritas pensados para lectura en escáner
+   Se aplica exclusivamente dentro de <article class="blog-post">.
+   ========================================================================== */
+
+.blog-post {
+  --font-post: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
+    Helvetica, Arial, sans-serif;
+  font-family: var(--font-post);
+  max-width: 68ch;
+  margin-inline: auto;
+}
+
+.blog-post * {
+  font-style: normal !important;
+  text-decoration: none;
+}
+
+.blog-post h1,
+.blog-post h2,
+.blog-post h3 {
+  font-family: var(--font-post);
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.blog-post__title {
+  font-size: clamp(1.7rem, 1.2rem + 2vw, 2.5rem);
+  line-height: 1.22;
+  margin-bottom: var(--space-5);
+}
+
+.blog-post__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+  font-family: var(--font-post);
+  font-size: var(--text-sm);
+  color: var(--color-text-subtle);
+  margin-bottom: var(--space-8);
+  padding-bottom: var(--space-6);
+  border-bottom: 1px solid var(--color-border);
+}
+.blog-post__meta .dot { opacity: 0.5; }
+
+.blog-post__lead {
+  font-size: var(--text-xl);
+  line-height: 1.55;
+  color: var(--color-silver-100);
+  margin-bottom: var(--space-7);
+}
+
+.blog-post h2 {
+  font-size: var(--text-xl);
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-4);
+}
+
+.blog-post p {
+  font-size: var(--text-lg);
+  line-height: 1.75;
+  color: var(--color-text-muted);
+  max-width: 68ch;
+}
+.blog-post p + p { margin-top: var(--space-5); }
+
+.blog-post strong {
+  color: var(--color-text);
+  font-weight: 700;
+}
+
+/* Los enlaces sí necesitan una marca visible y accesible: no es la
+   "cursiva/subrayado decorativo" que pide evitar el checklist, es la
+   convención estándar para que un enlace se identifique como tal. */
+.blog-post a {
+  color: var(--color-violet-300);
+  text-decoration: underline;
+  text-decoration-color: rgba(167, 139, 250, 0.45);
+  text-underline-offset: 3px;
+  border-radius: var(--radius-sm);
+  transition: color var(--dur-fast) var(--ease-out),
+              text-decoration-color var(--dur-fast) var(--ease-out);
+}
+.blog-post a:hover {
+  color: var(--color-violet-200);
+  text-decoration-color: var(--color-violet-300);
+}
+
+.blog-post__links {
+  margin-top: var(--space-9);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-border);
+}
+.blog-post__links h2 {
+  margin-top: 0;
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--color-text-subtle);
+}
+.blog-post__links ul { display: flex; flex-direction: column; gap: var(--space-2); }
+.blog-post__links a { font-size: var(--text-base); font-weight: 500; }
+
+.blog-post__back {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-post);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-8);
+  cursor: pointer;
+}
+.blog-post__back svg { width: 16px; height: 16px; }
+.blog-post__back:hover { color: var(--color-text); }
