@@ -708,6 +708,19 @@ ul { list-style: none; padding: 0; }
   margin-top: var(--space-3);
 }
 
+/* Ilustración de apoyo (PNG sin fondo) dentro de cada tarjeta de área */
+.area__figure {
+  width: 100%;
+  max-width: 280px;
+  margin-inline: auto;
+}
+.area__figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 16px 30px rgba(0, 0, 0, 0.35));
+}
+
 .area__text { color: var(--color-text-muted); }
 .area__text + .area__text { margin-top: var(--space-4); }
 
