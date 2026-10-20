@@ -1379,6 +1379,40 @@ ul { list-style: none; padding: 0; }
   }
 }
 
+/* Retrato rectangular (Sobre mí): variante sin recorte circular,
+   para no repetir siempre el mismo tratamiento de foto. */
+.bio-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-7);
+  align-items: start;
+}
+
+.profile-photo-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  margin-inline: auto;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--color-border-strong);
+  box-shadow: var(--shadow-lg);
+  flex: none;
+}
+
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (min-width: 720px) {
+  .bio-grid { grid-template-columns: 300px 1fr; gap: var(--space-8); }
+  .profile-photo-wrap { max-width: none; margin-inline: 0; }
+}
+
 .page-hero {
   padding-block: var(--space-9) var(--space-8);
   text-align: center;
