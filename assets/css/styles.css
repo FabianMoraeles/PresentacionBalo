@@ -1392,6 +1392,13 @@ ul { list-style: none; padding: 0; }
   }
 }
 
+/* Foto circular del panel de Contacto */
+.contact__photo {
+  width: 140px;
+  aspect-ratio: 1;
+  margin: 0 auto var(--space-6);
+}
+
 /* Retrato rectangular (Sobre mí): variante sin recorte circular,
    para no repetir siempre el mismo tratamiento de foto. */
 .bio-grid {
