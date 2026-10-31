@@ -1481,6 +1481,7 @@ ul { list-style: none; padding: 0; }
 @media (min-width: 900px) {
   .gallery { grid-template-columns: repeat(4, 1fr); }
 }
+.gallery.gallery--duo { grid-template-columns: repeat(2, 1fr); max-width: 560px; }
 
 @media (min-width: 900px) {
   .project { grid-template-columns: 1fr 1.15fr; padding: var(--space-7); gap: var(--space-8); }
