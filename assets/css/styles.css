@@ -1458,6 +1458,30 @@ ul { list-style: none; padding: 0; }
 
 .project__link { margin-top: var(--space-6); }
 
+.project__media--portrait { max-width: 340px; width: 100%; justify-self: center; }
+
+.project__gallery { grid-column: 1 / -1; }
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+.gallery li { display: flex; flex-direction: column; gap: var(--space-2); }
+.gallery a {
+  display: block;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  transition: border-color var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-out);
+}
+.gallery a:hover { border-color: rgba(167, 139, 250, 0.5); transform: translateY(-2px); }
+.gallery img { display: block; width: 100%; height: auto; }
+.gallery span { font-size: var(--text-sm); color: var(--color-text-subtle); line-height: 1.5; }
+
+@media (min-width: 900px) {
+  .gallery { grid-template-columns: repeat(4, 1fr); }
+}
+
 @media (min-width: 900px) {
   .project { grid-template-columns: 1fr 1.15fr; padding: var(--space-7); gap: var(--space-8); }
 }
