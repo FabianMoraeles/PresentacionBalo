@@ -61,6 +61,13 @@
   margin-bottom: var(--space-4);
 }
 
+.blog-post h3 {
+  font-size: var(--text-lg);
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-3);
+  color: var(--color-silver-100);
+}
+
 .blog-post p {
   font-size: var(--text-lg);
   line-height: 1.75;

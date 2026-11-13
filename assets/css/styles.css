@@ -1392,6 +1392,45 @@ ul { list-style: none; padding: 0; }
   }
 }
 
+/* Manifiesto (Sobre mí) */
+.manifesto {
+  padding: var(--space-8) var(--space-6);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  background:
+    radial-gradient(ellipse 620px 300px at 50% 0%, rgba(139, 92, 246, 0.18), transparent 70%),
+    linear-gradient(165deg, rgba(30, 21, 55, 0.6), rgba(11, 7, 20, 0.35));
+}
+.manifesto .eyebrow { justify-content: center; width: 100%; }
+.manifesto__intro {
+  font-family: var(--font-heading);
+  font-size: clamp(1.25rem, 1rem + 1.2vw, 1.75rem);
+  line-height: 1.4;
+  color: var(--color-silver-100);
+  text-align: center;
+  max-width: 34ch;
+  margin: 0 auto var(--space-8);
+}
+.manifesto__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+.manifesto__item {
+  padding-top: var(--space-5);
+  border-top: 1px solid rgba(167, 139, 250, 0.35);
+}
+.manifesto__title {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-3);
+}
+.manifesto__item p { color: var(--color-text-muted); }
+
+@media (min-width: 760px) {
+  .manifesto { padding: var(--space-9) var(--space-8); }
+  .manifesto__grid { grid-template-columns: repeat(2, 1fr); gap: var(--space-7) var(--space-8); }
+}
+
 /* Video de presentación (Sobre mí) */
 .video-frame {
   max-width: 880px;

@@ -12,3 +12,6 @@ node_modules/
 
 .vercel
 .env*
+
+# Entregables que no forman parte del sitio
+*.pptx
